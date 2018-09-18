@@ -1,32 +1,52 @@
 {
-  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "http://localhost:8090/mysql-connector-property-options.json",
   "description": "Model property options specific to MySQL",
   "type": "object",
   "properties": {
-    "columnName" : {
-      "type" : "string",
-      "description" : "Override for default column name"
+    "columnName": {
+      "type": "string",
+      "description": "Override for default column name"
     },
-    "dataType" : {
-      "type" : "string",
-      "description" : "MySQL datatype\r\rhttp://loopback.io/doc/en/lb3/MySQL-connector#using-thedatatypefieldcolumn-option-with-mysql",
-      "enum": ["INT", "TINYINT", "SMALLINT", "MEDIUMINT", "BIGINT", "FLOAT", "DOUBLE", "DECIMAL", "DATE", "DATETIME", "TIMESTAMP", "TIME", "YEAR", "CHAR", "VARCHAR", "BLOB", "TINYBLOB", "MEDIUMBLOB", "LONGBLOB"]
+    "dataType": {
+      "type": "string",
+      "description": "MySQL datatype\r\rhttp://loopback.io/doc/en/lb3/MySQL-connector#using-thedatatypefieldcolumn-option-with-mysql",
+      "enum": [
+        "INT",
+        "TINYINT",
+        "SMALLINT",
+        "MEDIUMINT",
+        "BIGINT",
+        "FLOAT",
+        "DOUBLE",
+        "DECIMAL",
+        "DATE",
+        "DATETIME",
+        "TIMESTAMP",
+        "TIME",
+        "YEAR",
+        "CHAR",
+        "VARCHAR",
+        "BLOB",
+        "TINYBLOB",
+        "MEDIUMBLOB",
+        "LONGBLOB"
+      ]
     },
-    "dataLength" : {
-      "type" : "integer",
-      "description" : "size for varchar, int, etc."
+    "dataLength": {
+      "type": "integer",
+      "description": "size for varchar, int, etc."
     },
-    "nullable" : {
-      "type" : "string",
-      "enum": [ "Y", "N" ]
+    "nullable": {
+      "type": "string",
+      "enum": ["Y", "N"]
     },
-    "dataScale" : {
-      "type" : "number",
+    "dataScale": {
+      "type": "number",
       "description": "Numeric data scale"
     },
-    "dataPrecision" : {
-      "type" : "number",
+    "dataPrecision": {
+      "type": "number",
       "description": "Numeric data precision"
     }
   }

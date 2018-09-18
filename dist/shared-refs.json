@@ -1,31 +1,39 @@
 {
-  "$schema" : "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/Sequoia/loopback-json-schemas/master/dist/shared-refs.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/fedebaier/loopback-json-schemas/master/dist/shared-refs.json",
   "title": "Shared LoopBack json property types",
   "description": "Definitions that are used in multiple places/schemas",
   "definitions": {
     "descriptionProp": {
-      "type" : ["string","array"],
+      "type": ["string", "array"],
       "description": "Optional description.\rYou can split long descriptions into arrays of strings (lines) to keep line lengths manageable.",
-      "oneOf": [
-        {"type" : "string"},
-        {"type" : "array", "items": {"type":"string"}} 
-      ]
+      "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }]
     },
-    "loopbackDatatypeProperty" : {
-      "description" : "a single type or an array of types",
-      "anyOf" : [
-        {"$ref" : "#/definitions/loopbackDatatypes"},
+    "loopbackDatatypeProperty": {
+      "description": "a single type or an array of types",
+      "anyOf": [
+        { "$ref": "#/definitions/loopbackDatatypes" },
         {
           "type": "array",
-          "items" : {"$ref" : "#/definitions/loopbackDatatypes"}
+          "items": { "$ref": "#/definitions/loopbackDatatypes" }
         }
       ]
     },
-    "loopbackDatatypes" : {
+    "loopbackDatatypes": {
       "type": "string",
       "description": "Any type described in LoopBack types: http://loopback.io/doc/en/lb3/LoopBack-types",
-      "enum" : ["any","array","boolean","buffer","date","geopoint","null","number","object","string"]
+      "enum": [
+        "any",
+        "array",
+        "boolean",
+        "buffer",
+        "date",
+        "geopoint",
+        "null",
+        "number",
+        "object",
+        "string"
+      ]
     }
   }
 }

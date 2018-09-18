@@ -1,11 +1,11 @@
 {
-  "$schema" : "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/Sequoia/loopback-json-schemas/master/dist/loopback-datasources-config.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/fedebaier/loopback-json-schemas/master/dist/loopback-datasources-config.json",
   "title": "Datasources Config",
   "type": "object",
   "description": "Defines datasources for models\r\rhttp://loopback.io/doc/en/lb3/datasources.json",
   "additionalProperties": {
-    "type" : "object",
+    "type": "object",
     "description": "A single datasource definition.",
     "properties": {
       "name": {
@@ -15,12 +15,23 @@
       "connector": {
         "type": "string",
         "description": "LoopBack connector to use",
-        "default" : "memory",
-        "enum" : ["memory", "oracle", "mongodb", "mysql", "postgresql", "soap", "mssql", "rest", "loopback-component-storage"]
+        "default": "memory",
+        "enum": [
+          "memory",
+          "oracle",
+          "mongodb",
+          "mysql",
+          "postgresql",
+          "soap",
+          "mssql",
+          "rest",
+          "loopback-component-storage",
+          "mail"
+        ]
       }
     },
-    "additionalProperties" : {
-      "description": "Various connection settings are required, depending on the connector. For information on the specific properties that each connector supports, see:\r\r* http://loopback.io/doc/en/lb3/Cloudant-connector.html \r\r* http://loopback.io/doc/en/lb3/DashDB.html \r\r* http://loopback.io/doc/en/lb3/DB2-connector.html \r\r* http://loopback.io/doc/en/lb3/Informix.html \r\r* http://loopback.io/doc/en/lb3/Memory-connector .html\r\r* http://loopback.io/doc/en/lb3/MongoDB-connector.html \r\r* http://loopback.io/doc/en/lb3/MySQL-connector.html \r\r* http://loopback.io/doc/en/lb3/Oracle-connector.html \r\r* http://loopback.io/doc/en/lb3/PostgreSQL-connector.html \r\r* http://loopback.io/doc/en/lb3/Redis-connector.html \r\r* http://loopback.io/doc/en/lb3/SQL-Server-connector.html \r\r* http://loopback.io/doc/en/lb3/SQLite3.html"
+    "additionalProperties": {
+      "description": "Various connection settings are required, depending on the connector. For information on the specific properties that each connector supports, see:\r\r* http://loopback.io/doc/en/lb3/Cloudant-connector.html \r\r* http://loopback.io/doc/en/lb3/DashDB.html \r\r* http://loopback.io/doc/en/lb3/DB2-connector.html \r\r* http://loopback.io/doc/en/lb3/Informix.html \r\r* http://loopback.io/doc/en/lb3/Memory-connector .html\r\r* http://loopback.io/doc/en/lb3/MongoDB-connector.html \r\r* http://loopback.io/doc/en/lb3/MySQL-connector.html \r\r* http://loopback.io/doc/en/lb3/Oracle-connector.html \r\r* http://loopback.io/doc/en/lb3/PostgreSQL-connector.html \r\r* http://loopback.io/doc/en/lb3/Redis-connector.html \r\r* http://loopback.io/doc/en/lb3/SQL-Server-connector.html \r\r* http://loopback.io/doc/en/lb3/SQLite3.html \r\r* http://loopback.io/doc/en/lb3/Email-connector.html"
     },
     "required": ["name", "connector"]
   }

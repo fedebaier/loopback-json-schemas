@@ -1,29 +1,29 @@
 {
-  "$schema" : "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/Sequoia/loopback-json-schemas/master/dist/loopback-model-config.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/fedebaier/loopback-json-schemas/master/dist/loopback-model-config.json",
   "title": "Model Config",
   "type": "object",
   "description": "Connects models to datasources. http://loopback.io/doc/en/lb3/model-config.json.html",
   "properties": {
-    "_meta" : {
+    "_meta": {
       "type": "object",
       "description": "Custom paths to autoload models & mixins",
       "properties": {
         "sources": {
           "type": "array",
           "description": "By default, LoopBack applications load models from `/common/models` subdirectory. To specify a different location (or even multiple locations) use the  `_meta.sources` property, whose value is an array of directory paths",
-          "items": {"type": "string"}
+          "items": { "type": "string" }
         },
         "mixins": {
           "type": "array",
           "description": "Array of relative paths to custom mixin definitions. http://loopback.io/doc/en/lb3/Defining-mixins.html",
-          "items": {"type": "string"}
+          "items": { "type": "string" }
         }
       }
     }
   },
   "additionalProperties": {
-    "type" : "object",
+    "type": "object",
     "description": "Configure models by model name. Add one property per model.",
     "properties": {
       "public": {
